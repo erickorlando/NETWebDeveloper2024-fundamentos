@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using Sesion01;
 
 Console.WriteLine("Sesion 01 en el curso .NET 8 Web Developer - Galaxy Training");
 Console.WriteLine(new string('*', 100));
@@ -115,5 +116,31 @@ var fechaActual = DateTime.Now;
 
 Console.WriteLine($"Valor formato fecha 1: {fechaActual.ToString("G", referencia01)}");
 Console.WriteLine($"Valor formato fecha´2: {fechaActual.ToString("G", referencia02)}");
+
+var persona01 = new Persona(); // crear instancia de la clase Persona
+
+Console.WriteLine("Persona 01:");
+Console.WriteLine("Ingresa tu nombre:");
+persona01.Nombre = Console.ReadLine()!;
+
+Console.WriteLine("Ingresa tu apellido:");
+persona01.Apellido = Console.ReadLine()!;
+
+Console.WriteLine($"El nombre de la persona es: {persona01.Nombre}, {persona01.Apellido}");
+Console.WriteLine($"Demostracion del ToString() => {persona01}");
+
+var variableX = persona01.ToString();
+Console.WriteLine(variableX);
+
+Console.WriteLine("Persona 02:");
+var persona02 = new Persona(); // crear instancia de la clase Persona
+
+Console.WriteLine("Ingresa tu nombre:");
+persona02.Nombre = Console.ReadLine()!;
+
+Console.WriteLine("Ingresa tu apellido:");
+persona02.Apellido = Console.ReadLine()!;
+
+persona02.MostrarNombreCompleto();
 
 Console.WriteLine("Fin del programa :-)");
