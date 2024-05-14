@@ -26,6 +26,7 @@ do
     Console.WriteLine("3. Bucle foreach");
     Console.WriteLine("4. Bucle while - do-while");
     Console.WriteLine("5. Manejo de excepciones");
+    Console.WriteLine("6. Arrays");
 
     if (!byte.TryParse(Console.ReadLine(), out var opcion))
     {
@@ -56,6 +57,10 @@ do
                 break;
             case 5:
                 BloqueTryCatch.Ejecutar();
+                valorValido = true;
+                break;
+            case 6:
+                Arrays.Ejecutar();
                 valorValido = true;
                 break;
         }
