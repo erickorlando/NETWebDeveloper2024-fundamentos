@@ -20,7 +20,7 @@ public class BloqueTryCatch
         {
             Console.WriteLine("Error de desbordamiento, el numero es superior a 255 o menor a 0");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Console.WriteLine("Ups! hay un error!");
         }

@@ -1,7 +1,21 @@
-﻿using Sesion02;
+﻿using System.Diagnostics;
+using Sesion02;
 
+#if NET6_0
+Console.ForegroundColor = ConsoleColor.Yellow;
+#elif NET7_0
+Console.ForegroundColor = ConsoleColor.Green;
+#else
+Console.ForegroundColor = ConsoleColor.Blue;
+#endif
 Console.WriteLine("Bienvenido a la sesion 02 del curso NET 8 Web Developer");
 Console.Title = "Sesion 02";
+
+
+#if WINDOWS
+Console.WriteLine("Hola estoy en Windows");
+#endif
+
 
 bool valorValido = false;
 do
@@ -33,6 +47,7 @@ do
                 break;
             case 3:
                 BucleForEach.Ejecutar();
+                Debugger.Break();
                 valorValido = true;
                 break;
             case 4:
@@ -44,8 +59,9 @@ do
                 valorValido = true;
                 break;
         }
-
-        Console.WriteLine("Fin del programa :=O) ");
     }
 
 } while (!valorValido);
+
+Console.WriteLine("Fin del programa :=O) ");
+Console.ReadLine();
