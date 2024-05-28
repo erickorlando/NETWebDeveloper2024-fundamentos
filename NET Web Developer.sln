@@ -21,11 +21,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. AplicacionDeDatos", "02
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. EjemplosSueltos", "01. EjemplosSueltos", "{A3019CEC-0A2E-432D-989C-4B2417DDDFF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceWeb.Aplicacion", "ECommerceWeb.Aplicacion\ECommerceWeb.Aplicacion.csproj", "{62313A04-D6FD-479C-8178-CFC95B4A96D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceWeb.Aplicacion", "ECommerceWeb.Aplicacion\ECommerceWeb.Aplicacion.csproj", "{62313A04-D6FD-479C-8178-CFC95B4A96D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceWeb.Entidades", "ECommerceWeb.Entidades\ECommerceWeb.Entidades.csproj", "{44039310-2E99-4C87-A1C0-4D0A3465A543}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceWeb.Entidades", "ECommerceWeb.Entidades\ECommerceWeb.Entidades.csproj", "{44039310-2E99-4C87-A1C0-4D0A3465A543}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceWeb.Repositorios", "ECommerceWeb.Repositorios\ECommerceWeb.Repositorios.csproj", "{87598358-9D74-43A3-A6CC-A18EAC09ED4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceWeb.Repositorios", "ECommerceWeb.Repositorios\ECommerceWeb.Repositorios.csproj", "{87598358-9D74-43A3-A6CC-A18EAC09ED4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Sesion 4", "04. Sesion 4", "{3DD894A8-FAB7-4492-8F08-4E0CE7754112}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceWebApplication", "Sesion04\ECommerceWebApplication\ECommerceWebApplication.csproj", "{A14D6F3F-F268-450B-AEF0-E2A238FFB68E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sesion04.ECommerceWeb.Entidades", "Sesion04\ECommerceWeb.Entidades\Sesion04.ECommerceWeb.Entidades.csproj", "{DB03A6E0-8532-4D3E-825A-20DC5F9B44E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sesion04.ECommerceWeb.Repositorios", "Sesion04\ECommerceWeb.Repositorios\Sesion04.ECommerceWeb.Repositorios.csproj", "{69CD088C-C814-40A7-9D5A-D11C53AF14EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +69,18 @@ Global
 		{87598358-9D74-43A3-A6CC-A18EAC09ED4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87598358-9D74-43A3-A6CC-A18EAC09ED4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87598358-9D74-43A3-A6CC-A18EAC09ED4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14D6F3F-F268-450B-AEF0-E2A238FFB68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14D6F3F-F268-450B-AEF0-E2A238FFB68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14D6F3F-F268-450B-AEF0-E2A238FFB68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14D6F3F-F268-450B-AEF0-E2A238FFB68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB03A6E0-8532-4D3E-825A-20DC5F9B44E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB03A6E0-8532-4D3E-825A-20DC5F9B44E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB03A6E0-8532-4D3E-825A-20DC5F9B44E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB03A6E0-8532-4D3E-825A-20DC5F9B44E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69CD088C-C814-40A7-9D5A-D11C53AF14EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69CD088C-C814-40A7-9D5A-D11C53AF14EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69CD088C-C814-40A7-9D5A-D11C53AF14EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69CD088C-C814-40A7-9D5A-D11C53AF14EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +95,9 @@ Global
 		{62313A04-D6FD-479C-8178-CFC95B4A96D5} = {E702B714-D6E8-45F1-A31F-5D1B32896D55}
 		{44039310-2E99-4C87-A1C0-4D0A3465A543} = {E702B714-D6E8-45F1-A31F-5D1B32896D55}
 		{87598358-9D74-43A3-A6CC-A18EAC09ED4C} = {E702B714-D6E8-45F1-A31F-5D1B32896D55}
+		{A14D6F3F-F268-450B-AEF0-E2A238FFB68E} = {3DD894A8-FAB7-4492-8F08-4E0CE7754112}
+		{DB03A6E0-8532-4D3E-825A-20DC5F9B44E0} = {3DD894A8-FAB7-4492-8F08-4E0CE7754112}
+		{69CD088C-C814-40A7-9D5A-D11C53AF14EB} = {3DD894A8-FAB7-4492-8F08-4E0CE7754112}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63377BDF-F656-412E-B6B2-AD0178FC311B}
