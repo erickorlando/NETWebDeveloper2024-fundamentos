@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ECommerceWeb.DataAccess.Data;
 using Sesion04.ECommerceWeb.Entidades;
 using Sesion04.ECommerceWeb.Repositorios.Interfaces;
 
@@ -7,14 +7,14 @@ namespace Sesion04.ECommerceWeb.Repositorios.Implementaciones
     public class RepositorioBase<TEntidad> : IRepositorioBase<TEntidad>
         where TEntidad : EntidadBase
     {
-        protected readonly DbContext Context;
+        protected readonly ECommerceDbContext Context;
 
-        protected RepositorioBase(DbContext context)
+        protected RepositorioBase(ECommerceDbContext context)
         {
             Context = context;
         }
         
-        public List<TEntidad> Listar()
+        public virtual List<TEntidad> Listar()
         {
             return Context
                 .Set<TEntidad>()

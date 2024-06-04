@@ -1,0 +1,46 @@
+﻿@using System.Net
+@using ECommerceWeb.Dto
+@page "/categorias"
+@inject HttpClient HttpClient
+
+<h3>Lista de Categorias</h3>
+
+@if (Categorias is null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var categoria in Categorias)
+            {
+                <tr>
+                    <td>@categoria.Id</td>
+                    <td>@categoria.Nombre</td>
+                    <td>@categoria.Descripcion</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+
+@code {
+
+    public ICollection<CategoriaDto>? Categorias { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Categorias = await HttpClient.GetFromJsonAsync<ICollection<CategoriaDto>>("https://localhost:7000/api/categorias");
+    }
+
+}

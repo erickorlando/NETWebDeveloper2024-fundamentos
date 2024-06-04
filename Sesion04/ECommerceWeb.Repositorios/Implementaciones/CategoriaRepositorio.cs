@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ECommerceWeb.DataAccess.Data;
 using Sesion04.ECommerceWeb.Entidades;
 using Sesion04.ECommerceWeb.Repositorios.Interfaces;
 
@@ -6,7 +6,7 @@ namespace Sesion04.ECommerceWeb.Repositorios.Implementaciones
 {
     public class CategoriaRepositorio : RepositorioBase<Categoria>, ICategoriaRepositorio
     {
-        public CategoriaRepositorio(DbContext context) 
+        public CategoriaRepositorio(ECommerceDbContext context) 
             : base(context)
         {
         }

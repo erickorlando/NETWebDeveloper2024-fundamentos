@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ECommerceWeb.DataAccess.Data;
+using Microsoft.EntityFrameworkCore;
 using Sesion04.ECommerceWeb.Entidades;
 using Sesion04.ECommerceWeb.Repositorios.Interfaces;
 
@@ -6,7 +7,7 @@ namespace Sesion04.ECommerceWeb.Repositorios.Implementaciones;
 
 public class VentaRepositorio : RepositorioBase<Venta>, IVentaRepositorio
 {
-    public VentaRepositorio(DbContext context) 
+    public VentaRepositorio(ECommerceDbContext context) 
         : base(context)
     {
     }
@@ -14,9 +15,9 @@ public class VentaRepositorio : RepositorioBase<Venta>, IVentaRepositorio
     public Venta? MostrarVenta(int ventaId)
     {
         return Context.Set<Venta>()
-            .Include(x => x.Cliente)
+            .Include(x => x.Cliente) // Include es para la tabla relacionada directa
             .Include(x => x.Detalles)
-            .ThenInclude(d => d.Producto)
+            .ThenInclude(d => d.Producto) // ThenInclude se usa para tablas relacionadas en colecciones.
             .ThenInclude(c => c.Categoria)
             .FirstOrDefault(p => p.Id == ventaId);
     }

@@ -2,17 +2,24 @@
 using Microsoft.Extensions.Logging;
 using Sesion04.ECommerceWeb.Entidades;
 
-namespace ECommerceWebApplication.Data
+namespace ECommerceWeb.DataAccess.Data
 {
     public class ECommerceDbContext : DbContext
     {
         public ECommerceDbContext()
+        {
+
+        }
+
+        public ECommerceDbContext(DbContextOptions<ECommerceDbContext> options)
+            :base(options)
         {
             
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (optionsBuilder.IsConfigured) return;
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ECommerceDB;Trusted_Connection=True",
                  o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
 

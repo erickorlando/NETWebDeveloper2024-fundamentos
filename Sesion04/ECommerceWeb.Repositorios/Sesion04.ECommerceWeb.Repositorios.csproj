@@ -11,6 +11,7 @@
 	</ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ECommerceWeb.DataAccess\ECommerceWeb.DataAccess.csproj" />
     <ProjectReference Include="..\ECommerceWeb.Entidades\Sesion04.ECommerceWeb.Entidades.csproj" />
   </ItemGroup>
 

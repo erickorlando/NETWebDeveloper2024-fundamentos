@@ -18,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ECommerceWeb.DataAccess\ECommerceWeb.DataAccess.csproj" />
+    <ProjectReference Include="..\..\ECommerceWeb.Repositorios\ECommerceWeb.Repositorios.csproj" />
     <ProjectReference Include="..\ECommerceWeb.Entidades\Sesion04.ECommerceWeb.Entidades.csproj" />
     <ProjectReference Include="..\ECommerceWeb.Repositorios\Sesion04.ECommerceWeb.Repositorios.csproj" />
   </ItemGroup>
