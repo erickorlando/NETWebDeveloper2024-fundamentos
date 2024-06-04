@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Sesion04.ECommerceWeb.Entidades;
 
 namespace ECommerceWebApplication.Data
@@ -12,7 +13,10 @@ namespace ECommerceWebApplication.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ECommerceDB;Trusted_Connection=True");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ECommerceDB;Trusted_Connection=True",
+                 o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
+
+            optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
         }
 
         public DbSet<Categoria> Categorias { get; set; } = default!;

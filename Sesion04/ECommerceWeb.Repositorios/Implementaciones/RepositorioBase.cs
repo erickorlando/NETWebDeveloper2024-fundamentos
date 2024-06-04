@@ -34,7 +34,7 @@ namespace Sesion04.ECommerceWeb.Repositorios.Implementaciones
                 .FirstOrDefault(p => p.Id == id);
         }
 
-        public void Insertar(TEntidad entidad)
+        public virtual void Insertar(TEntidad entidad)
         {
             Context.Set<TEntidad>().Add(entidad); // Esto lo agrega a la coleccion del DbSet
             Context.SaveChanges(); // Esto confirma el guardado del registro
